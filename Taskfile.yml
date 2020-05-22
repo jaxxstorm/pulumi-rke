@@ -23,6 +23,8 @@ tasks:
     deps:
       - task: provider
       - task: build_sdk
+    cmds:
+      - task: clean
 
   tfgen:
     desc: Build the tfgen binary
@@ -31,9 +33,8 @@ tasks:
       - go build -o {{ .WORKDIR }}/bin/{{ .TFGEN }} -ldflags "-X {{ .PROJECT }}/{{ .VERSION_PATH }}={{ .VERSION }}" {{ .PROJECT}}/{{ .PROVIDER_PATH }}/cmd/{{ .TFGEN }}
     generates:
       - "{{ .WORKDIR }}/bin/{{ .TFGEN }}"
-    sources:
-      - provider/go.sum
-      - provider/go.mod
+    status:
+      - test -f {{ .WORKDIR }}/bin/{{ .TFGEN }}
 
   schema:
     desc: Generate the schema
