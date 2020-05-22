@@ -73,6 +73,8 @@ jobs:
       with:
         name: pulumi-${{ env.PROVIDER }}
         path: ${{ github.workspace }}/bin
+    - name: Restore binary perms
+      run: find ${{ github.workspace }} -name "pulumi-*-${{ env.PROVIDER }}" -print -exec chmod +x {} \;
     - name: Build tfgen & provider binaries
       run: task provider
     - name: Upload artifacts
