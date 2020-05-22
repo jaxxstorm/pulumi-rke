@@ -32,6 +32,8 @@ jobs:
       uses: jaxxstorm/action-install-gh-release@release/v1-alpha
       with:
         repo: go-task/task
+    - name: Install Pulumi CLI
+      uses: pulumi/action-install-pulumi-cli@releases/v1
     - name: Build tfgen & provider binaries
       run: task provider
     - name: Upload artifacts
