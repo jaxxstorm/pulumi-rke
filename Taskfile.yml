@@ -143,7 +143,7 @@ tasks:
       LATEST_PLUGIN_VER:
         sh: curl --silent "https://api.github.com/repos/{{.ORG}}/pulumi-{{.PACK}}/tags" | jq '.[0].name | sub("^v"; "")' -r
     cmds:
-      - pulumi plugin install resource {{.PACK}} {{.LATEST_PLUGIN_VER}}
+      - pulumi plugin install --server https://github.com/{{.ORG}}/pulumi-{{.PACK}}/releases/download/v{{.LATEST_PLUGIN_VER}} resource {{.PACK}} {{.LATEST_PLUGIN_VER}}
     generates:
       - $HOME/.pulumi/plugins/resource-{{.PACK}}-v{{.LATEST_PLUGIN_VER}}/pulumi-resource-{{.PACK}}
     method: checksum
