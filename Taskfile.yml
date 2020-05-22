@@ -1,0 +1,87 @@
+# https://taskfile.dev
+
+version: '2'
+
+vars:
+  PACK: "rke"
+  ORG: "jaxxstorm"
+  PROJECT: "github.com/{{ .ORG }}/pulumi-{{ .PACK }}"
+  PROVIDER: "pulumi-resource-{{ .PACK }}"
+  TFGEN: "pulumi-tfgen-{{ .PACK }}"
+  PROVIDER_PATH: "provider/v2"
+  VERSION_PATH: "{{ .PROVIDER_PATH }}/pkg/version.Version"
+  VERSION:
+    sh: pulumictl util get-version
+  WORKDIR:
+    sh: pwd
+
+tasks:
+  tfgen:
+    desc: Build the tfgen binary
+    dir: provider
+    cmds:
+      - go build -a -o {{ .WORKDIR }}/bin/{{ .TFGEN }} -ldflags "-X {{ .PROJECT }}/{{ .VERSION_PATH }}={{ .VERSION }}" {{ .PROJECT}}/{{ .PROVIDER_PATH }}/cmd/{{ .TFGEN }}
+    generates:
+      - "{{ .WORKDIR }}/bin/{{ .TFGEN }}"
+    method: checksum
+
+  schema:
+    desc: Generate the schema
+    deps: [tfgen]
+    cmds:
+      - "{{ .WORKDIR }}/bin/{{ .TFGEN }} schema --out provider/cmd/{{ .PROVIDER }}"
+    generates:
+      - "provider/cmd/{{ .PROVIDER }}/schema.json"
+    method: checksum
+
+  generate:
+    desc: Run Go generate
+    deps: [schema]
+    dir: provider
+    env:
+      VERSION: pulumictl util get-version # set the version as an env var so generate uses it
+    cmds:
+      - go generate cmd/{{ .PROVIDER }}/main.go
+    generates:
+      - "provider/cmd/{{ .PROVIDER }}/schema.go"
+    method: checksum
+
+  provider:
+    desc: Build provider
+    deps: [generate]
+    dir: provider
+    cmds:
+      - go build -a -o {{ .WORKDIR }}/bin/{{ .PROVIDER }} -ldflags "-X {{.PROJECT}}/{{.VERSION_PATH}}={{.VERSION}}" {{.PROJECT}}/{{.PROVIDER_PATH}}/cmd/{{.PROVIDER}}
+    generates:
+      - "{{ .WORKDIR }}/bin/{{ .PROVIDER }}"
+    method: checksum
+
+  build_nodejs:
+    desc: "Build NodeJS SDK"
+    dir: sdk/nodejs
+    cmds:
+      - echo $VERSION
+      - "{{ .WORKDIR }}/bin/{{ .TFGEN }} nodejs --overlays {{ .WORKDIR}}/provider/overlays/nodejs --out ."
+      - yarn install
+      - yarn run tsc
+      - cp ../../README.md ../../LICENSE package.json yarn.lock ./bin/
+      - sed -i.bak -e "s/\$${VERSION}/{{.VERSION}}/g" ./bin/package.json
+
+  build_python:
+    desc: "Build Python SDK"
+    dir: sdk/python
+    env:
+      VERSION:
+        sh: pulumictl util get-version --language python
+    cmds:
+      - echo $VERSION
+      - "{{ .WORKDIR }}/bin/{{ .TFGEN }} python --overlays {{ .WORKDIR }}/provider/overlays/nodejs --out ."
+      - cp ../../README.md .
+      - python3 setup.py clean --all 2>/dev/null
+
+
+
+
+
+
+
