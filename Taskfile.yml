@@ -34,7 +34,6 @@ tasks:
     sources:
       - provider/go.sum
       - provider/go.mod
-    method: checksum
 
   schema:
     desc: Generate the schema

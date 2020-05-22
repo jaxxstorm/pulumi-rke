@@ -43,7 +43,6 @@ jobs:
         path: ${{ github.workspace }}/bin
   build_sdk:
     name: build_sdk
-    needs: prerequisites
     runs-on: ubuntu-latest
     steps:
     - name: Checkout Repo
