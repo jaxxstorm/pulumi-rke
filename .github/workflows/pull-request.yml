@@ -95,3 +95,5 @@ jobs:
         path: ${{ github.workspace}}/sdk/${{ matrix.language }}
     strategy:
       fail-fast: true
+      matrix:
+        language: [ "python", "nodejs", "dotnet" ]
