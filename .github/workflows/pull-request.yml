@@ -44,6 +44,7 @@ jobs:
   provider:
     name: provider
     runs-on: ubuntu-latest
+    needs: tfgen
     steps:
     - name: Checkout Repo
       uses: actions/checkout@v2
