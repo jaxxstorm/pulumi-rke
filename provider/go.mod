@@ -3,9 +3,9 @@ module github.com/jaxxstorm/pulumi-rke/provider/v2
 go 1.13
 
 require (
-	github.com/hashicorp/terraform-plugin-sdk v1.10.0
-	github.com/pulumi/pulumi-terraform-bridge/v2 v2.3.2
-	github.com/pulumi/pulumi/sdk/v2 v2.1.1-0.20200505193935-7b446d6c55ad
+	github.com/pulumi/pulumi-terraform-bridge/v2 v2.3.3
+	github.com/pulumi/pulumi/sdk/v2 v2.1.1
+	github.com/hashicorp/terraform-plugin-sdk v1.13.0
 	github.com/rancher/terraform-provider-rke v1.0.0-beta.1.0.20200403174431-26b7d1fa727a
 )
 
