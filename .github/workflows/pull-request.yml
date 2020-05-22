@@ -2,6 +2,11 @@ env:
   GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
   GO111MODULE: "on"
   PROVIDER: rke
+name: pull-request
+"on":
+  pull_request:
+    branches:
+    - master
 jobs:
   prerequisites:
     name: prerequisites
