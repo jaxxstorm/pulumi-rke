@@ -923,11 +923,13 @@ github.com/pulumi/pulumi-terraform-bridge v1.8.4 h1:pfDNoYxduzsSEWj3M7hRuDw9Ic0z
 github.com/pulumi/pulumi-terraform-bridge v1.8.4/go.mod h1:EGMJtAh9rdqiqO0B5P458iigWu7BAwLxqgUWvGs33Es=
 github.com/pulumi/pulumi-terraform-bridge/v2 v2.11.0 h1:1QRTyQB/IR1kCu/Q93WDoSkpeiqhyIxLYWl80r0MRMc=
 github.com/pulumi/pulumi-terraform-bridge/v2 v2.11.0/go.mod h1:oAnoNd+jzGFYjDWs+SSmCjHq6CmDo8urBCfbFRb/v2E=
+github.com/pulumi/pulumi-terraform-bridge/v2 v2.12.0/go.mod h1:HeGEtErxeRTElloiI8SJvnb2X/AgGvOxgTGI0irEIus=
 github.com/pulumi/pulumi/pkg v0.0.0-20200325225746-80f1989600a3 h1:CUswHMz3r5GBJHeGL5p4NtAGwqoelFyv54KW1A1XQfk=
 github.com/pulumi/pulumi/pkg v0.0.0-20200325225746-80f1989600a3/go.mod h1:iX8/aPGtI3VhJnIUqHoT2iy3/0wQJySIRMs9y2TBILw=
 github.com/pulumi/pulumi/pkg/v2 v2.11.3-0.20201009201355-249140242ebb/go.mod h1:7NmgAy555Lk7v4Ddb6HF1BVAhdyT3012h47vz/hLD2k=
 github.com/pulumi/pulumi/pkg/v2 v2.12.0 h1:PQ+8op2E+6gp5Dcb1p9u3X/IRQfSd6byUtlPKIlgkJw=
 github.com/pulumi/pulumi/pkg/v2 v2.12.0/go.mod h1:a5zxh9WrYwWR/cDOhPMNFOUpJuwtyeFS+ZYJebehQ+c=
+github.com/pulumi/pulumi/pkg/v2 v2.12.1-0.20201019222817-89c956d18942/go.mod h1:a5zxh9WrYwWR/cDOhPMNFOUpJuwtyeFS+ZYJebehQ+c=
 github.com/pulumi/pulumi/sdk v0.0.0-20200321193742-f095e64d0f8e/go.mod h1:ZCVEM4V8vr5IogqUhSu28+FEEn3bIjGYpEOSHRureO0=
 github.com/pulumi/pulumi/sdk v0.0.0-20200325225746-80f1989600a3/go.mod h1:0jjygtqEwLnjNEL3zIn3ynjT/37ZJ42DZE6k2+2NAUM=
 github.com/pulumi/pulumi/sdk v1.14.1 h1:FnUPMgO2AgqvKzSBOy3F2X4nJ8n/SaXCOP2eYSNkAxk=
