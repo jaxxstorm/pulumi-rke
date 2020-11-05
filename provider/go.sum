@@ -425,6 +425,7 @@ github.com/gocql/gocql v0.0.0-20190402132108-0e1d5de854df/go.mod h1:4Fw1eo5iaEhD
 github.com/godbus/dbus v0.0.0-20190422162347-ade71ed3457e/go.mod h1:bBOAhwG1umN6/6ZUMtDFBMQR8jRg9O75tm9K00oMsK4=
 github.com/gofrs/flock v0.7.1 h1:DP+LD/t0njgoPBvT5MJLeliUIVQR03hiKR6vezdwHlc=
 github.com/gofrs/flock v0.7.1/go.mod h1:F1TvTiK9OcQqauNUHlbJvyl9Qa1QvF/gOUDKA14jxHU=
+github.com/gofrs/uuid v3.3.0+incompatible/go.mod h1:b2aQJv3Z4Fp6yNu3cdSllBxTCLRxnplIgP/c0N/04lM=
 github.com/gogo/protobuf v1.1.1/go.mod h1:r8qH/GZQm5c6nD/R0oafs1akxWv10x8SbQlK7atdtwQ=
 github.com/gogo/protobuf v1.2.0/go.mod h1:r8qH/GZQm5c6nD/R0oafs1akxWv10x8SbQlK7atdtwQ=
 github.com/gogo/protobuf v1.2.1/go.mod h1:hp+jE20tsWTFYpLwKvXlhS1hjn+gTNwPg2I6zVXpSg4=
@@ -928,6 +929,7 @@ github.com/pulumi/pulumi/pkg v0.0.0-20200325225746-80f1989600a3/go.mod h1:iX8/aP
 github.com/pulumi/pulumi/pkg/v2 v2.11.3-0.20201009201355-249140242ebb/go.mod h1:7NmgAy555Lk7v4Ddb6HF1BVAhdyT3012h47vz/hLD2k=
 github.com/pulumi/pulumi/pkg/v2 v2.12.0 h1:PQ+8op2E+6gp5Dcb1p9u3X/IRQfSd6byUtlPKIlgkJw=
 github.com/pulumi/pulumi/pkg/v2 v2.12.0/go.mod h1:a5zxh9WrYwWR/cDOhPMNFOUpJuwtyeFS+ZYJebehQ+c=
+github.com/pulumi/pulumi/pkg/v2 v2.13.0/go.mod h1:xLEDqsipr92IXfe8EJrl8bANoEUtwmBJGBE8X8PKmP0=
 github.com/pulumi/pulumi/sdk v0.0.0-20200321193742-f095e64d0f8e/go.mod h1:ZCVEM4V8vr5IogqUhSu28+FEEn3bIjGYpEOSHRureO0=
 github.com/pulumi/pulumi/sdk v0.0.0-20200325225746-80f1989600a3/go.mod h1:0jjygtqEwLnjNEL3zIn3ynjT/37ZJ42DZE6k2+2NAUM=
 github.com/pulumi/pulumi/sdk v1.14.1 h1:FnUPMgO2AgqvKzSBOy3F2X4nJ8n/SaXCOP2eYSNkAxk=
