@@ -945,9 +945,11 @@ github.com/rancher/norman v0.0.0-20200517050325-f53cae161640/go.mod h1:92rz/7QN7
 github.com/rancher/rke v1.1.0/go.mod h1:Fw4u45cKMFBTu81jAxN5wtZeMgS4862RxVixhRc5p3E=
 github.com/rancher/rke v1.2.0 h1:IxnUfQKyiQ1F16xERd9JSboS8g43JHtjpmtcfgssHQE=
 github.com/rancher/rke v1.2.0/go.mod h1:aPSc14Hp8UGLscL/wB9ZZQHPX/kjDiPXLcoMTCY2NS4=
+github.com/rancher/rke v1.2.1/go.mod h1:aPSc14Hp8UGLscL/wB9ZZQHPX/kjDiPXLcoMTCY2NS4=
 github.com/rancher/terraform-provider-rke v1.0.0-beta.1.0.20200403174431-26b7d1fa727a/go.mod h1:fxIhzyfXJp0B3y9UAsKDFKCuDYJQlsLTzbqQONQ8yHg=
 github.com/rancher/terraform-provider-rke v1.1.3 h1:FVe99uHLFpJg5Xx7b015i28hVLZHFKdAE+NRWslWXv8=
 github.com/rancher/terraform-provider-rke v1.1.3/go.mod h1:sEgnswCMKVw3pSEJHn00h0OV56f3KSduB5jXGtsLF5w=
+github.com/rancher/terraform-provider-rke v1.1.4/go.mod h1:npJuyZxptaLA0drDkssarROYY8whgTI+K9MEQBem9LM=
 github.com/rancher/types v0.0.0-20200326224903-b4612bd96d9b/go.mod h1:k5LoTlUpefw0eAzFSJsZI0gf+C4WE41yrc1jm/MS1nM=
 github.com/rancher/wrangler v0.4.1/go.mod h1:1cR91WLhZgkZ+U4fV9nVuXqKurWbgXcIReU4wnQvTN8=
 github.com/rancher/wrangler v0.5.0/go.mod h1:txHSBkPtVgNH/0pUCvdP0Ak0HptAOc9ffBmFxQnL4z4=
