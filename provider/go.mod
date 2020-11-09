@@ -7,7 +7,7 @@ require (
 	github.com/jaxxstorm/pulumi-rke/provider v0.0.0-20200428064951-e46a6be7b858 // indirect
 	github.com/pulumi/pulumi-terraform-bridge/v2 v2.11.0
 	github.com/pulumi/pulumi/pkg/v2 v2.12.0
-	github.com/pulumi/pulumi/sdk/v2 v2.12.0
+	github.com/pulumi/pulumi/sdk/v2 v2.13.2
 	github.com/rancher/terraform-provider-rke v1.1.3
 )
 
