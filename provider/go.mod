@@ -8,7 +8,7 @@ require (
 	github.com/pulumi/pulumi-terraform-bridge/v2 v2.11.0
 	github.com/pulumi/pulumi/pkg/v2 v2.12.0
 	github.com/pulumi/pulumi/sdk/v2 v2.12.0
-	github.com/rancher/terraform-provider-rke v1.1.3
+	github.com/rancher/terraform-provider-rke v1.1.5
 )
 
 replace (
