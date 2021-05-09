@@ -3,7 +3,7 @@ ORG              := jaxxstorm
 PROJECT          := github.com/${ORG}/pulumi-${PACK}
 NODE_MODULE_NAME := @pulumi/${PACK}
 TF_NAME          := ${PACK}
-PROVIDER_PATH    := provider/v2
+PROVIDER_PATH    := provider/v3
 VERSION_PATH     := ${PROVIDER_PATH}/pkg/version.Version
 
 TFGEN           := pulumi-tfgen-${PACK}
@@ -16,7 +16,7 @@ WORKING_DIR     := $(shell pwd)
 
 .PHONY: development provider build_sdks build_nodejs build_dotnet build_go build_python cleanup
 
-development:: install_plugins provider lint_provider build_sdks install_sdks cleanup # Build the provider & SDKs for a development environment
+development:: install_plugins provider lint_provider build_sdks install_sdks # Build the provider & SDKs for a development environment
 
 # used by the downstream provider action
 build:: install_plugins provider build_sdks install_sdks
